@@ -2,7 +2,7 @@
 
 Projeto web desenvolvido com Python e Flask. 
 
-## 🚀 Como iniciar o projeto localmente
+## Como iniciar o projeto localmente
 
 Siga as instruções abaixo para configurar o ambiente de desenvolvimento:
 
