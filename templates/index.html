@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holística - Login</title>
+    <link rel="icon" type="image/jpeg" href="{{ url_for('static', filename='images/logo.jpeg') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<div class="app">
+
+    <header class="topo" id="cabecalho">
+        <div class="topo-esquerda" style="display: flex; align-items: center; gap: 12px;">
+            <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Símbolo Holística"
+                 class="logo-simbolo">
+            <span class="logo" id="logo">Holística</span>
+        </div>
+        <div class="topo-direita">
+            <span id="textoTopoLogin">To-do list</span>
+        </div>
+    </header>
+
+    <section class="tela ativa" id="login">
+        <form action="/" method="POST" class="login-card">
+            <img src="{{ url_for('static', filename='images/arara_login.png') }}" class="arara" alt="Arara Login">
+            <h2>Login</h2>
+
+            <input type="text" name="username" placeholder="USUÁRIO" required>
+            <input type="password" name="password" placeholder="SENHA" required>
+
+            {% if erro %}
+            <p style="color: #ff4a4a; font-size: 14px; margin-bottom: 10px; font-weight: 500;">{{ erro }}</p>
+            {% endif %}
+
+            <button type="submit">Entrar</button>
+
+        </form>
+    </section>
+
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

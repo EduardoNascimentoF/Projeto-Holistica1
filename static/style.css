@@ -1,0 +1,438 @@
+/* =========================================
+   1. RESET E CONFIGURAÇÕES GERAIS
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* CONTAINER APP PRINCIPAL */
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2b0080, #4361ee, #7209b7);
+  background-size: 300% 300%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+/* =========================================
+   2. TOPO / HEADER (CABEÇALHO)
+========================================= */
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 50px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo-simbolo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.perfil-topo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+/* =========================================
+   3. CONTROLE DE TELAS
+========================================= */
+.tela {
+  display: none;
+  flex: 1;
+}
+
+.tela.ativa {
+  display: flex;
+}
+
+/* =========================================
+   4. TELA DE LOGIN / REGISTRO
+========================================= */
+#login {
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  position: relative;
+  width: 350px;
+  padding: 50px 30px;
+  border-radius: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.login-card h2 {
+  margin-bottom: 25px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  border: 1.5px solid #fff;
+  background: transparent;
+  color: white;
+  font-weight: 500;
+  outline: none;
+  text-align: center;
+}
+
+.login-card input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: white;
+  color: #3a0ca3;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-card button:hover {
+  background: #f72585;
+  color: white;
+}
+
+.arara {
+  position: absolute;
+  top: -115px;
+  right: -50px;
+  width: 170px;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+}
+
+/* =========================================
+   5. ESTRUTURA GERAL DO DASHBOARD
+========================================= */
+.conteudo-dashboard {
+  display: flex;
+  width: 100%;
+  gap: 25px;
+}
+
+/* MENU LATERAL */
+.menu-lateral {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav-btn-menu, .home-btn {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 15px 25px;
+  border-radius: 20px;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  backdrop-filter: blur(5px);
+}
+
+.nav-btn-menu:hover, .home-btn:hover, .nav-btn-menu.ativo {
+  background: #f72585;
+  color: white;
+  font-weight: 600;
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(247, 37, 133, 0.4);
+}
+
+.home-btn {
+  background: transparent;
+  padding: 8px 15px;
+  width: auto;
+  justify-content: center;
+}
+
+/* PAINEL PRINCIPAL */
+.painel-principal {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 25px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* =========================================
+   6. TELA MOTIVACIONAL HOME
+========================================= */
+.card-motivacional {
+  position: relative;
+  padding: 100px;
+  margin-top: 50px;
+  text-align: left;
+  max-width: 80%;
+}
+
+.card-motivacional h2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #ffffff;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+}
+
+.arara-msg {
+  position: absolute;
+  bottom: 0px;
+  right: -140px;
+  width: 250px;
+  filter: drop-shadow(5px 10px 15px rgba(0,0,0,0.3));
+}
+
+/* =========================================
+   7. LAYOUT DE COLUNAS (TAREFAS / REUNIÕES / PERFIL)
+========================================= */
+.layout-colunas {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* CARDS DE DETALHES (GLASSMORPHISM) */
+.card-detalhe, .calendario-widget {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #333;
+}
+
+.card-detalhe {
+  min-height: 280px;
+  justify-content: space-between;
+}
+
+.card-detalhe h3 {
+  font-size: 16px;
+  color: #3a0ca3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.descricao-texto {
+  color: #555;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.prazo-container {
+  margin-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 15px;
+  text-align: center;
+}
+
+.prazo-container h4 {
+  font-size: 13px;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+/* =========================================
+   8. ABA DE TAREFAS
+========================================= */
+.coluna-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tarefa-pilula {
+  position: relative;
+  background: rgba(255, 255, 255, 0.85);
+  color: #333;
+  padding: 14px 20px 14px 55px;
+  border-radius: 35px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.tarefa-pilula:hover {
+  transform: scale(1.02);
+  background: #ffffff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.status-badge {
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: 3px solid;
+}
+
+.status-badge.check { border-color: #4ade80; color: #16a34a; }
+.status-badge.cross { border-color: #f87171; color: #dc2626; }
+.status-badge.empty { border-color: #cbd5e1; }
+
+/* =========================================
+   9. CALENDÁRIO (REUNIÕES)
+========================================= */
+.calendario-dias-semana {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: 600;
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.calendario-grade {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  text-align: center;
+}
+
+.dia-ativo {
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+  color: #444;
+}
+
+.dia-ativo.hoje:not(.selecionado) {
+  border: 1.5px solid #4361ee;
+  color: #4361ee;
+  font-weight: 700;
+}
+
+.dia-ativo:hover,
+.dia-ativo.selecionado {
+  background: #3a0ca3;
+  color: white;
+  box-shadow: 0 4px 10px rgba(58, 12, 163, 0.3);
+}
+
+.evento-cross {
+  position: relative;
+  font-weight: bold;
+  color: #3a0ca3;
+}
+
+.evento-cross::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  width: 5px;
+  height: 5px;
+  background: #3a0ca3;
+  border-radius: 50%;
+}
+
+.evento-cross:hover::after,
+.evento-cross.selecionado::after {
+  background: white;
+}
+
+/* =========================================
+   10. MELHORIA GLOBAL DE INPUTS
+========================================= */
+input[type="text"],
+input[type="password"],
+input[type="url"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 18px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.25s ease;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    background: rgba(255, 255, 255, 0.13);
+    border-color: #4361ee;
+    box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.25);
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+}
